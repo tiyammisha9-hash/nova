@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova</title>
+    <link rel="stylesheet" href="biscuits.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+        <div class="icon">
+            <img src="img/icon.jpg.svg" alt="Nova Bakery">
+            <span><I></I><strong>Nova</strong><br><small>Bakery</small></I></span>
+        </div>
+
+        <div class="search">
+            <input type="search" placeholder="Search...">  
+            
+        </div>
+        <span class="img-icon scr">🔍</span>
+
+        <a href="home.html">Home</a>
+        <a href="biscuits.html">Biscuits</a>
+        <a href="pastry.html">Pastery</a>
+        <a href="cake.html">Cake</a>
+        <a href="gallery.html">Gallery</a>
+
+        <input type="button" value="🛒">
+        <input type="button" value="❤ ">
+        <input type="button" value="📞">
+    
+    </div>
+    </header>
+    <main>
+        <div class="group">
+            <h3 class="name">PramiyamBiscuits</h3>
+            <h3 class="name">SimpleBiscuits</h3>
+            <h3 class="name">NuttyBiscuits</h3>
+            <h3 class="name">SaltBiscuits</h3>
+            <h3 class="name">Crakers</h3>
+            <h3 class="name">ChoclateBiscuits</h3>
+        </div>
+       
+
+        <ul class="gallery">
+
+        <!-- item -->
+        <li>
+            <div class="img-box">
+                <img src="img/1b.jfif" alt="Apple cake"
+                     data-name="Apple Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious apple cake">               
+            </div>
+            
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="img/2b.jfif" alt="Fatch cake"
+                     data-name="Fatch Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Tasty fatch cake">
+            </div>
+        </li>
+
+        <li>
+            <div class="img-box">
+                <img src="img/3b.jfif" alt="Cupcake Black"
+                     data-name="Cupcake Black"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious black cupcake">
+            </div>
+        </li>
+        <li>
+            <div class="img-box">
+                <img src="img/4b.jfif" alt="Chocolate Cake"
+                     data-name="Chocolate Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious chocolate cake">
+            </div>
+        </li>
+        <li>
+            <div class="img-box">
+                <img src="img/5b.jfif" alt="Strawberry Cake"
+                     data-name="Strawberry Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious strawberry cake">
+            </div>
+        </li>
+        <li>
+            <div class="img-box">   
+                <img src="img/6b.jfif" alt="Vanilla Cake"
+                     data-name="Vanilla Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious vanilla cake">
+
+        <li>
+            <div class="img-box">   
+                <img src="img/7b.jfif" alt="Vanilla Cake"
+                     data-name="Vanilla Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious vanilla cake">
+
+        <li>
+            <div class="img-box">   
+                <img src="img/8b.jfif" alt="Red Velvet Cake"
+                     data-name="Red Velvet Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious red velvet cake">
+            </div>
+                
+            <li>
+            <div class="img-box">   
+                <img src="img/9b.jfif" alt="Vanilla Cake"
+                     data-name="Vanilla Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious vanilla cake">
+
+        <li>
+            <div class="img-box">   
+                <img src="img/10b.jfif" alt="Vanilla Cake"
+                     data-name="Apple Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious vanilla cake">
+
+                
+
+        <li>
+            <div class="img-box">   
+                <img src="img/11b.jfif" alt="Vanilla Cake"
+                     data-name="Banana Cake"
+                     data-price="only 70 pkr"
+                     data-desc="Delicious vanilla cake">
+
+                
+    </ul>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-img">
+        <h1><span id="img-icon fav">❤</span> </h1> 
+        <h1><span id="img-icon order">🛒</span></h1>               
+        <h2 id="modal-name"></h2>
+        <p id="modal-desc"></p>  
+        <p id="modal-price"></p>    
+    </div>
+</div>
+
+<script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalName = document.getElementById("modal-name");
+const modalPrice = document.getElementById("modal-price");
+const modalDesc = document.getElementById("modal-desc");
+
+document.querySelectorAll(".img-box img").forEach(img => {
+    img.onclick = () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        modalName.textContent = img.dataset.name;
+        modalPrice.textContent = img.dataset.price;
+        modalDesc.textContent = img.dataset.desc;
+    };
+});
+
+document.querySelector(".close").onclick = () => modal.style.display = "none";
+
+window.onclick = e => {
+    if (e.target === modal) modal.style.display = "none";
+};
+</script>
+        
+    </main>
+</body>
+</html>
