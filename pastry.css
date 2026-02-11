@@ -193,3 +193,108 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ===== Responsive CSS ===== */
+
+/* تبلت */
+@media (max-width: 768px) {
+    /* گالری دو ستون */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* منو و آیکون‌ها */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .menu input {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    /* جستجو */
+    .search input {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .search img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* تصاویر گالری */
+    .img-box img {
+        height: 180px;
+    }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+    /* گالری تک ستون */
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* منو و آیکون‌ها */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .menu input {
+        width: 45px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    /* جستجو */
+    .search input {
+        width: 140px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .search img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* تصاویر گالری */
+    .img-box img {
+        height: 140px;
+    }
+}

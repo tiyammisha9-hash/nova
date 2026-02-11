@@ -178,3 +178,103 @@ footer {
         height: 50vh;
     }
 }
+/* ===== Responsive CSS ===== */
+
+/* تبلت */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .left-bottom img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .search input {
+        width: 300px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .icon img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* موبایل بزرگ */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .left-bottom img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .search input {
+        width: 200px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: 35vh;
+    }
+
+    .left-bottom img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .search input {
+        width: 150px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
